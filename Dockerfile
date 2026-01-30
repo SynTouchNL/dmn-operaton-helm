@@ -1,6 +1,6 @@
 
 # Operaton base image - https://hub.docker.com/r/operaton/operaton
-FROM operaton/operaton:1.0.2
+FROM operaton/operaton:1.0.3
 
 RUN mkdir -p /operaton/configuration/userlib
 
@@ -9,6 +9,6 @@ RUN wget https://repo1.maven.org/maven2/org/operaton/bpm/extension/operaton-keyc
 
 RUN ls -l /operaton/configuration/userlib
 
-RUN rm -f /operaton/configuration/default.yml
+# RUN rm -f /operaton/configuration/default.yml
 # RUN rm -f /operaton/configuration/deployment.yml
 RUN chown -R operaton:operaton /operaton/configuration/userlib

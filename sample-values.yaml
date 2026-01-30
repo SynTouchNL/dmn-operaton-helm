@@ -22,7 +22,7 @@
 image:
   #repository: operaton/operaton
   repository: {MyRepository}/operaton/operatonkeycloak
-  tag: 1.0.2
+  tag: 1.0.3
 #  pullPolicy: IfNotPresent
 #  pullSecrets: []
 #  command: ["./operaton.sh"]
