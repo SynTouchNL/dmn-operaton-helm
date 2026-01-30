@@ -1,0 +1,324 @@
+<databaseChangeLog 
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" 
+    xmlns:pro="http://www.liquibase.org/xml/ns/pro" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd 
+                        http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd 
+                        http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!-- The changeSet id is your version number. You need to change/increase it before you release a new changeset otherwise your changes wont be implemented by liquibase.
+    Liquibase is a versioning tool and recognizes changeset ID's that have been conducted on the database before.
+
+    This script is made to delete all authorizations before implementing the list below, so this list needs to reflect the COMPLETE dataset for the act_ru_authorisation tables
+    This is because the id's in the id column of authorization data needs to be unique and script will fail if this is not true
+    
+    You can add or change rows of data in the changeset below to customize your Operaton authorisation table to your specific needs. 
+    You can copy relevant parts from a liquibase changeset genereated from your database using the liquibase tool and paste them in the changeset below
+    See the liquibase documentation for instructions on how to do this
+
+    Of course you can use more complex workflows for maintaining liquibase changesets but this may be the easiest way for people who just start out :)
+     -->
+    <changeSet author="Beheer (generated)" id="1734022384980-3">
+        <delete tableName="act_ru_authorization"/>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7794a83e-983e-11ef-8e73-9295f51028ea"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_decisions_read"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="0"/>
+            <column name="resource_id_" value="cockpit"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="8a0740a6-983e-11ef-8e73-9295f51028ea"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_decisions_read"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="10"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="4098"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7bf05c01-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="0"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c0bfa52-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="1"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c0da803-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="2"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c0f2ea4-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="3"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c1c26f5-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="4"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c1dd4a6-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="5"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c2db328-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="7"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c3aab79-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="8"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c3c321a-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="9"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c3d6a9b-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="10"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c49788c-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="11"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c4aff2d-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="12"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c586cae-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="13"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c59cc3f-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="14"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c5b52e0-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="15"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c689951-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="16"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c6a1ff2-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="17"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c771843-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="18"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c7877d4-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="19"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c79b055-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="20"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c871dd6-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="21"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="7c2c0577-c6b3-11ef-bb62-1667c2bdaf52"/>
+            <column name="rev_" valueNumeric="2"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_admin"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="6"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="2147483647"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+        <insert tableName="act_ru_authorization">
+            <column name="id_" value="d88cff96-d8a4-11ef-80a7-9ace2ef48aaa"/>
+            <column name="rev_" valueNumeric="1"/>
+            <column name="type_" valueNumeric="1"/>
+            <column name="group_id_" value="operaton_m2m"/>
+            <column name="user_id_"/>
+            <column name="resource_type_" valueNumeric="10"/>
+            <column name="resource_id_" value="*"/>
+            <column name="perms_" valueNumeric="258"/>
+            <column name="removal_time_"/>
+            <column name="root_proc_inst_id_"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
