@@ -9,6 +9,10 @@ RUN wget https://repo1.maven.org/maven2/org/operaton/bpm/extension/operaton-keyc
 
 RUN ls -l /operaton/configuration/userlib
 
-# RUN rm -f /operaton/configuration/default.yml
-# RUN rm -f /operaton/configuration/deployment.yml
+RUN rm -f /operaton/configuration/default.yml
+RUN rm -f /operaton/configuration/deployment.yml
+RUN rm -f /operaton/configuration/production.yml
+
+COPY --chown=operaton:operaton examples/production.yml /operaton/configuration/
+
 RUN chown -R operaton:operaton /operaton/configuration/userlib
