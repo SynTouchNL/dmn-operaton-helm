@@ -120,11 +120,11 @@ spring.web.resources:
 # Externalized Keycloak configuration
 keycloak:
   # Keycloak access for the Identity Provider plugin.
-  host: ${KEYCLOAK_HOST}
-  realm: ${KEYCLOAK_REALM:zgw-ad}
+  host: ${OPERATON_KEYCLOAK_HOST}
+  realm: ${OPERATON_KEYCLOAK_REALM:zgw-ad}
   # Keycloak Operaton Identity Client
-  client.id: ${KEYCLOAK_CLIENT_ID}
-  client.secret: ${KEYCLOAK_CLIENT_SECRET}
+  client.id: ${OPERATON_KEYCLOAK_CLIENT_ID}
+  client.secret: ${OPERATON_KEYCLOAK_CLIENT_SECRET}
 
 plugin.identity.keycloak:
   keycloakIssuerUrl: ${keycloak.host}/auth/realms/${keycloak.realm}
