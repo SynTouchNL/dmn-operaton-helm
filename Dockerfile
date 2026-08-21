@@ -1,6 +1,6 @@
 
 # Operaton base image - https://hub.docker.com/r/operaton/operaton
-FROM operaton/operaton:1.0.3
+FROM operaton/operaton:2.1.4
 
 RUN mkdir -p /operaton/configuration/userlib
 
