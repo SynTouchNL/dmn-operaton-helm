@@ -127,8 +127,8 @@ keycloak:
   client.secret: ${OPERATON_KEYCLOAK_CLIENT_SECRET}
 
 plugin.identity.keycloak:
-  keycloakIssuerUrl: ${keycloak.host}/auth/realms/${keycloak.realm}
-  keycloakAdminUrl: ${keycloak.host}/auth/admin/realms/${keycloak.realm}
+  keycloakIssuerUrl: ${keycloak.host}/realms/${keycloak.realm}
+  keycloakAdminUrl: ${keycloak.host}/admin/realms/${keycloak.realm}
   clientId: ${keycloak.client.id}
   clientSecret: ${keycloak.client.secret}
   useEmailAsOperatonUserId: false
