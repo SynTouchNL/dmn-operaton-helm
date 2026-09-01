@@ -146,7 +146,7 @@ spring.security.oauth2:
         client-id: ${keycloak.client.id}
         client-secret: ${keycloak.client.secret}
         authorization-grant-type: authorization_code
-        redirect-uri: "${OPERATON_HOST_URL}/{action}/oauth2/code/{registrationId}"
+        redirect-uri: "{baseUrl}/{action}/oauth2/code/{registrationId}"
         scope: openid, profile, email
     provider:
       keycloak:
