@@ -1,6 +1,6 @@
 
 # Operaton base image - https://hub.docker.com/r/operaton/operaton
-FROM operaton/operaton:2.1.4
+FROM operaton/operaton:2.1.5
 
 RUN mkdir -p /operaton/configuration/userlib
 
@@ -13,6 +13,6 @@ RUN rm -f /operaton/configuration/default.yml
 RUN rm -f /operaton/configuration/deployment.yml
 RUN rm -f /operaton/configuration/production.yml
 
-COPY --chown=operaton:operaton examples/production.yml /operaton/configuration/
+COPY --chown=operaton:operaton files/keycloak-plugin/production.yml /operaton/configuration/
 
 RUN chown -R operaton:operaton /operaton/configuration/userlib
