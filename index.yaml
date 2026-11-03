@@ -3,6 +3,20 @@ entries:
   dmn-operaton:
   - apiVersion: v2
     appVersion: 2.1.5
+    created: "2026-11-03T14:56:15.312939683Z"
+    dependencies:
+    - name: operaton
+      repository: https://operaton.github.io/operaton-helm/
+      version: 1.2.0
+    description: Helm chart for Operaton
+    digest: a3555927b1899c136be77c69de15d5763e07a83648a4f39673727e574221bf18
+    name: dmn-operaton
+    type: application
+    urls:
+    - https://github.com/SynTouchNL/dmn-operaton-helm/releases/download/dmn-operaton-0.0.4/dmn-operaton-0.0.4.tgz
+    version: 0.0.4
+  - apiVersion: v2
+    appVersion: 2.1.5
     created: "2026-11-03T13:18:12.700274721Z"
     dependencies:
     - name: operaton
@@ -43,4 +57,4 @@ entries:
     urls:
     - https://github.com/SynTouchNL/dmn-operaton-helm/releases/download/dmn-operaton-0.0.1/dmn-operaton-0.0.1.tgz
     version: 0.0.1
-generated: "2026-11-03T13:18:12.700288412Z"
+generated: "2026-11-03T14:56:15.312960042Z"
