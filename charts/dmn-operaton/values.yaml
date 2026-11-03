@@ -8,7 +8,6 @@ syncAKV: {}
 #      secret:
 #        name: "dmnstudio"
 
-
 operaton:
 # Default values for operaton.
 # This is a YAML-formatted file.
