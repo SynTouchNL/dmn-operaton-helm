@@ -6,6 +6,9 @@ on:
       - main
     tags:
       - 'v*'
+    paths:
+      - 'Dockerfile'
+      - 'files/keycloak-plugin/production.yml'
   workflow_dispatch:
 
 env:
@@ -22,6 +25,27 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
+
+      - name: Extract image versions
+        id: versions
+        shell: bash
+        run: |
+          set -euo pipefail
+          
+          OPERATON_VERSION=$(sed -n \
+            's/^ARG OPERATON_VERSION=\(.*\)$/\1/p' Dockerfile | head -n1)
+          
+          JAVA_VERSION=$(sed -n \
+            's/^ARG JAVA_VERSION=\(.*\)$/\1/p' Dockerfile | head -n1)
+          
+          if [[ -z "$OPERATON_VERSION" || -z "$JAVA_VERSION" ]]; then
+            echo "Unable to extract image versions from Dockerfile"
+            exit 1
+          fi
+          
+          echo "operaton_version=$OPERATON_VERSION" >> "$GITHUB_OUTPUT"
+          echo "java_version=$JAVA_VERSION" >> "$GITHUB_OUTPUT"
+          echo "image_tag=${OPERATON_VERSION}-jdk${JAVA_VERSION}" >> "$GITHUB_OUTPUT"
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -46,6 +70,7 @@ jobs:
             type=semver,pattern={{major}}
             type=sha,prefix={{branch}}-
             type=raw,value=latest,enable={{is_default_branch}}
+            type=raw,value=${{ steps.versions.outputs.image_tag }},enable={{is_default_branch}}
 
       - name: Build and push Docker image
         id: build
