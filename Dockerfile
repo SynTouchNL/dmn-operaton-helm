@@ -1,5 +1,5 @@
 # Operaton version configuration
-ARG OPERATON_VERSION=2.2.0
+ARG OPERATON_VERSION=2.2.2
 ARG JAVA_VERSION=25
 
 # Operaton base image - https://hub.docker.com/r/operaton/operaton
